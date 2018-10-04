@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2011
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenManager", "TokenManager\TokenManager.csproj", "{47892CB4-8B72-4412-BDF3-C3D6C2B4A9FB}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{16BC7CB2-3EB1-4C35-A0DF-A4CBAE8D4AB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{53A86841-848A-4B27-A84B-B36586E2176A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47892CB4-8B72-4412-BDF3-C3D6C2B4A9FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47892CB4-8B72-4412-BDF3-C3D6C2B4A9FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47892CB4-8B72-4412-BDF3-C3D6C2B4A9FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47892CB4-8B72-4412-BDF3-C3D6C2B4A9FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16BC7CB2-3EB1-4C35-A0DF-A4CBAE8D4AB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16BC7CB2-3EB1-4C35-A0DF-A4CBAE8D4AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16BC7CB2-3EB1-4C35-A0DF-A4CBAE8D4AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16BC7CB2-3EB1-4C35-A0DF-A4CBAE8D4AB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53A86841-848A-4B27-A84B-B36586E2176A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53A86841-848A-4B27-A84B-B36586E2176A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53A86841-848A-4B27-A84B-B36586E2176A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53A86841-848A-4B27-A84B-B36586E2176A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {64CCE481-D651-4507-A0AD-6535AFC90470}
+	EndGlobalSection
+EndGlobal
