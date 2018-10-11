@@ -2,44 +2,54 @@
 using System.Threading.Tasks;
 using TokenManager.Interfaces.Services;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Options;
-using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Caching.Distributed;
+using TokenManager.Interfaces.Models.Providers;
 
 namespace TokenManager.Services
 {
     public class TokenManager : ITokenManager
     {
-        private readonly IMemoryCache _cache;
+        private readonly IDistributedCache _cache;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        private readonly IOptions<JwtOptions> _jwtOptions;
+        private readonly IJwtConfigurationProvider _jwtConfigurationProvider;
 
-        public TokenManager (IMemoryCache cache, 
-                    IHttpContextAccessor httpContextAccessor, 
-                    IOptions<JwtOptions> jwtOptions)
+        public TokenManager (IDistributedCache cache, 
+                    IHttpContextAccessor httpContextAccessor,
+                    IJwtConfigurationProvider jwtConfigurationProvider)
         {
             _cache = cache;
             _httpContextAccessor = httpContextAccessor;
-            _jwtOptions = jwtOptions;
+            _jwtConfigurationProvider = jwtConfigurationProvider;
         }
 
-        public async Task ITokenManager.DeactivateAsync(string token)
+        public async Task DeactivateAsync(string token)
+        {
+            await _cache.SetStringAsync(GetKey(token), " "
+                , new DistributedCacheEntryOptions
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(
+                        double.Parse(_jwtConfigurationProvider.GetExpirationTimeInMinutes()))
+                });
+        }
+
+        public async Task DeactivateCurrentAsync()
         {
             throw new NotImplementedException();
         }
 
-        public async Task ITokenManager.DeactivateCurrentAsync()
+        public async Task<bool> IsActiveAsync(string token)
+        {
+            return await _cache.GetStringAsync(GetKey(token)) == null;
+        }
+
+        public async Task<bool> IsCurrentTokenActiveAsync()
         {
             throw new NotImplementedException();
         }
 
-        public async Task<bool> ITokenManager.IsActiveAsync(string token)
+        private static string GetKey(string token)
         {
-            throw new NotImplementedException();
-        }
-
-        public async Task<bool> ITokenManager.IsCurrentTokenActiveAsync()
-        {
-            throw new NotImplementedException();
+            return $"tokens: {token} are deactivated";
         }
     }
 }
