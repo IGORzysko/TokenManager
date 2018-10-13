@@ -1,8 +1,0 @@
-version: '3'
-
-services:
-  tokenmanager:
-    image: tokenmanager
-    build:
-      context: .
-      dockerfile: TokenManager\Dockerfile
