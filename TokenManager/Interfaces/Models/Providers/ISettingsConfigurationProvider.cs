@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 
-namespace TokenManager.Interfaces.Models.Providers.JwtConfigurationProvider
+namespace TokenManager.Interfaces.Models.Providers
 {
-    public interface IJwtConfigurationProvider
+    public interface ISettingsConfigurationProvider
     {
         IWebHostBuilder CreateWebHostBuilder();
         void RunWebHostBuilder();

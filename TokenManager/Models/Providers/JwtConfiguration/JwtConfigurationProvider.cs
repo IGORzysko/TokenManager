@@ -1,12 +1,13 @@
-﻿using Microsoft.AspNetCore;
+﻿using System.IO;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using System.IO;
-using TokenManager.Interfaces.Models.Providers.JwtConfigurationProvider;
+using TokenManager.Interfaces.Models.Providers;
+using TokenManager.Interfaces.Models.Providers.JwtConfiguration;
 
 namespace TokenManager.Models.Providers.ConfigurationBuilderProvider
 {
-    public class JwtConfigurationProvider : IJwtConfigurationProvider
+    public class JwtConfigurationProvider : IJwtConfigurationProvider, ISettingsConfigurationProvider
     {
         private IConfigurationRoot ConfigSection { get; set; }
 

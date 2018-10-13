@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using TokenManager.Interfaces.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Distributed;
-using TokenManager.Interfaces.Models.Providers;
+using TokenManager.Interfaces.Models.Providers.JwtConfiguration;
 
 namespace TokenManager.Services
 {
