@@ -1,0 +1,15 @@
+networks:
+  default:
+    external:
+      name: nat
+services:
+  tokenmanager:
+    build:
+      context: C:\Users\igtr\source\repos\TokenManager
+      dockerfile: TokenManager\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: tokenmanager
+    ports:
+    - 80/tcp
+version: '3.0'
