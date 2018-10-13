@@ -2,34 +2,44 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using System.IO;
-using TokenManager.Interfaces.Models.Providers.ConfigurationBuilderProvider;
+using TokenManager.Interfaces.Models.Providers.JwtConfigurationProvider;
 
 namespace TokenManager.Models.Providers.ConfigurationBuilderProvider
 {
-    public class ConfigurationBuilderProvider : IConfigurationBuilderProvider
+    public class JwtConfigurationProvider : IJwtConfigurationProvider
     {
-        public IConfigurationRoot Config { get; private set; }
+        private IConfigurationRoot ConfigSection { get; set; }
 
-        public ConfigurationBuilderProvider()
+        public JwtConfigurationProvider()
         {
-            //CreateWebHostBuilder("appsettings.json").Build().Run();
+            
         }
 
-        public IWebHostBuilder CreateWebHostBuilder (string configurationJsonFileName)
+        public IWebHostBuilder CreateWebHostBuilder()
         {
-            this.Config = new ConfigurationBuilder()
+            this.ConfigSection = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile(configurationJsonFileName, optional: true, reloadOnChange: true)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .Build();
 
             return WebHost.CreateDefaultBuilder()
-                .UseConfiguration(this.Config)
+                .UseConfiguration(this.ConfigSection)
                 .UseStartup<Startup>();
         }
 
-        public string GetKeyValue (string jwtKey)
+        public void RunWebHostBuilder()
         {
-            return this.Config.GetValue<string>($"jwt:{jwtKey}");
+            CreateWebHostBuilder().Build().Run();
+        }
+
+        public string GetSecretKey()
+        {
+            return this.ConfigSection.GetSection("jwt").GetValue<string>("secretKey");
+        }
+
+        public string GetExpirationTimeInMinutes()
+        {
+            return this.ConfigSection.GetSection("jwt").GetValue<string>("expirationTimeInMinutes");
         }
     }
 }
