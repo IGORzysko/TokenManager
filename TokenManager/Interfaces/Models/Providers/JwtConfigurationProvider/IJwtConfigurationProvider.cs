@@ -1,4 +1,4 @@
-﻿namespace TokenManager.Interfaces.Models.Providers
+﻿namespace TokenManager.Interfaces.Models.Providers.JwtConfigurationProvider
 {
     public interface IJwtConfigurationProvider
     {

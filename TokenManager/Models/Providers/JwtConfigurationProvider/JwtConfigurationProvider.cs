@@ -1,5 +1,5 @@
 ﻿using System.Configuration;
-using TokenManager.Interfaces.Models.Providers;
+using TokenManager.Interfaces.Models.Providers.JwtConfigurationProvider;
 
 namespace TokenManager.Services.Providers
 {
