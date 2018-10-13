@@ -8,7 +8,7 @@ branches:
    - develop
  
 before_script:
- - dotnet restore
+ - dotnet restore TokenManager/TokenManager.csproj
     
 script:
  - dotnet build TokenManager/TokenManager.csproj # token manager web api project
