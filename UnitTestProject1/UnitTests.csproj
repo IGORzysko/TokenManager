@@ -16,4 +16,9 @@
     <Folder Include="Business\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj" />
+    <ProjectReference Include="..\TokenManager\TokenManager.csproj" />
+  </ItemGroup>
+
 </Project>
