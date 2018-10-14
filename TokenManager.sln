@@ -9,12 +9,12 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{53A86841-848A-4B27-A84B-B36586E2176A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "..\UnitTests\UnitTests.csproj", "{8097558A-48AC-41FA-9254-9752C0C4FEB0}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2885CF45-64C6-4D6B-B3A1-41ED75995C8E}"
 	ProjectSection(SolutionItems) = preProject
 		.travis.yml = .travis.yml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTestProject1\UnitTests.csproj", "{14C43BA1-284F-4F16-A042-ED6CD4870607}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,10 +34,10 @@ Global
 		{53A86841-848A-4B27-A84B-B36586E2176A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53A86841-848A-4B27-A84B-B36586E2176A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53A86841-848A-4B27-A84B-B36586E2176A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8097558A-48AC-41FA-9254-9752C0C4FEB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8097558A-48AC-41FA-9254-9752C0C4FEB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8097558A-48AC-41FA-9254-9752C0C4FEB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8097558A-48AC-41FA-9254-9752C0C4FEB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14C43BA1-284F-4F16-A042-ED6CD4870607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C43BA1-284F-4F16-A042-ED6CD4870607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C43BA1-284F-4F16-A042-ED6CD4870607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C43BA1-284F-4F16-A042-ED6CD4870607}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
