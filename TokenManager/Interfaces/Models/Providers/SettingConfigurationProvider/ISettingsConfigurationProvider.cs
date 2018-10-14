@@ -6,7 +6,7 @@ namespace TokenManager.Interfaces.Models.Providers.SettingConfigurationProvider
     public interface ISettingsConfigurationProvider
     {
         IConfigurationRoot ConfigSection { get; }
-        IWebHostBuilder CreateWebHostBuilder();
-        void RunWebHostBuilder();
+        void CreateConfigurationBuilder();
+        void SetConfigurationFileName(string configurationFileName);
     }
 }
