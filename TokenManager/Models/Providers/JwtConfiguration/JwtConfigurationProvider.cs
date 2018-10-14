@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using TokenManager.Interfaces.Models.Providers;
 using TokenManager.Interfaces.Models.Providers.JwtConfiguration;
+using TokenManager.Interfaces.Models.Providers.SettingConfigurationProvider;
 
 namespace TokenManager.Models.Providers.ConfigurationBuilderProvider
 {

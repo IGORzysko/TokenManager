@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using System.IO;
-using TokenManager.Interfaces.Models.Providers;
+using TokenManager.Interfaces.Models.Providers.SettingConfigurationProvider;
 
 namespace TokenManager.Models.Providers.SettingConfiguration
 {
