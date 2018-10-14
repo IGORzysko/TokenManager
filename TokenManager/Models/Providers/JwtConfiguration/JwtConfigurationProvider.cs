@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Configuration;
-using TokenManager.Interfaces.Models.Providers;
 using TokenManager.Interfaces.Models.Providers.JwtConfiguration;
 using TokenManager.Interfaces.Models.Providers.SettingConfigurationProvider;
 
@@ -7,7 +6,6 @@ namespace TokenManager.Models.Providers.ConfigurationBuilderProvider
 {
     public class JwtConfigurationProvider : IJwtConfigurationProvider
     {
-        public IConfigurationRoot ConfigSection { get; private set; }
         private ISettingsConfigurationProvider _settingsConfigurationProvider { get; set; }
 
         public JwtConfigurationProvider(ISettingsConfigurationProvider settingsConfigurationProvider)
