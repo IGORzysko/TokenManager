@@ -6,22 +6,22 @@ namespace TokenManager.Models.Providers.ConfigurationBuilderProvider
 {
     public class JwtConfigurationProvider : IJwtConfigurationProvider
     {
-        private ISettingsConfigurationProvider _settingsConfigurationProvider { get; set; }
+        private ISettingsConfigurationProvider SettingsConfigurationProvider { get; set; }
 
         public JwtConfigurationProvider(ISettingsConfigurationProvider settingsConfigurationProvider)
         {
-            _settingsConfigurationProvider = settingsConfigurationProvider;
+            SettingsConfigurationProvider = settingsConfigurationProvider;
         }
 
         public string GetSecretKey()
         {
-            return _settingsConfigurationProvider.ConfigSection.GetSection("jwt")
+            return SettingsConfigurationProvider.ConfigSection.GetSection("jwt")
                 .GetValue<string>("secretKey");
         }
 
         public string GetExpirationTimeInMinutes()
         {
-            return _settingsConfigurationProvider.ConfigSection.GetSection("jwt")
+            return SettingsConfigurationProvider.ConfigSection.GetSection("jwt")
                 .GetValue<string>("expirationTimeInMinutes");
         }
     }
