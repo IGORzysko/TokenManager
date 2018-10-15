@@ -7,6 +7,5 @@ namespace TokenManager.Interfaces.Models.Providers.SettingConfigurationProvider
     {
         IConfigurationRoot ConfigSection { get; }
         void CreateConfigurationBuilder();
-        void SetConfigurationFileName(string configurationFileName);
     }
 }
