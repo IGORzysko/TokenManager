@@ -1,3 +1,9 @@
+C:\Users\igtr\source\repos\TokenManager\UnitTests\bin\Debug\netcoreapp2.0\Business.dll
+C:\Users\igtr\source\repos\TokenManager\UnitTests\bin\Debug\netcoreapp2.0\TokenManager.dll
+C:\Users\igtr\source\repos\TokenManager\UnitTests\obj\Debug\netcoreapp2.0\UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\igtr\source\repos\TokenManager\UnitTests\obj\Debug\netcoreapp2.0\UnitTests.csproj.CoreCompileInputs.cache
+C:\Users\igtr\source\repos\TokenManager\UnitTests\obj\Debug\netcoreapp2.0\UnitTests.AssemblyInfoInputs.cache
+C:\Users\igtr\source\repos\TokenManager\UnitTests\obj\Debug\netcoreapp2.0\UnitTests.AssemblyInfo.cs
 C:\Users\igtr\source\repos\TokenManager\UnitTests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\igtr\source\repos\TokenManager\UnitTests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\igtr\source\repos\TokenManager\UnitTests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -6,9 +12,8 @@ C:\Users\igtr\source\repos\TokenManager\UnitTests\bin\Debug\netcoreapp2.0\UnitTe
 C:\Users\igtr\source\repos\TokenManager\UnitTests\bin\Debug\netcoreapp2.0\UnitTests.runtimeconfig.dev.json
 C:\Users\igtr\source\repos\TokenManager\UnitTests\bin\Debug\netcoreapp2.0\UnitTests.dll
 C:\Users\igtr\source\repos\TokenManager\UnitTests\bin\Debug\netcoreapp2.0\UnitTests.pdb
-C:\Users\igtr\source\repos\TokenManager\UnitTests\obj\Debug\netcoreapp2.0\UnitTests.csprojResolveAssemblyReference.cache
-C:\Users\igtr\source\repos\TokenManager\UnitTests\obj\Debug\netcoreapp2.0\UnitTests.csproj.CoreCompileInputs.cache
-C:\Users\igtr\source\repos\TokenManager\UnitTests\obj\Debug\netcoreapp2.0\UnitTests.AssemblyInfoInputs.cache
-C:\Users\igtr\source\repos\TokenManager\UnitTests\obj\Debug\netcoreapp2.0\UnitTests.AssemblyInfo.cs
+C:\Users\igtr\source\repos\TokenManager\UnitTests\bin\Debug\netcoreapp2.0\TokenManager.pdb
+C:\Users\igtr\source\repos\TokenManager\UnitTests\bin\Debug\netcoreapp2.0\Business.pdb
+C:\Users\igtr\source\repos\TokenManager\UnitTests\obj\Debug\netcoreapp2.0\UnitTests.csproj.CopyComplete
 C:\Users\igtr\source\repos\TokenManager\UnitTests\obj\Debug\netcoreapp2.0\UnitTests.dll
 C:\Users\igtr\source\repos\TokenManager\UnitTests\obj\Debug\netcoreapp2.0\UnitTests.pdb

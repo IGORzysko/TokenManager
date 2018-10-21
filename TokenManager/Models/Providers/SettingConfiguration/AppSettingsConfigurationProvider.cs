@@ -4,7 +4,7 @@ using TokenManager.Interfaces.Models.Providers.SettingConfigurationProvider;
 
 namespace TokenManager.Models.Providers.SettingConfiguration
 {
-    public class AppSettingsConfigurationProvider : ISettingsConfigurationProvider
+    public class AppSettingsConfigurationProvider : IAppSettingsConfigurationProvider
     {
         public IConfigurationRoot ConfigSection { get; private set; }
 

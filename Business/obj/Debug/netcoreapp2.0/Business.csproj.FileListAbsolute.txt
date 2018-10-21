@@ -1,9 +1,9 @@
 C:\Users\igtr\source\repos\TokenManager\Business\bin\Debug\netcoreapp2.0\Business.deps.json
 C:\Users\igtr\source\repos\TokenManager\Business\bin\Debug\netcoreapp2.0\Business.dll
 C:\Users\igtr\source\repos\TokenManager\Business\bin\Debug\netcoreapp2.0\Business.pdb
+C:\Users\igtr\source\repos\TokenManager\Business\obj\Debug\netcoreapp2.0\Business.csprojResolveAssemblyReference.cache
 C:\Users\igtr\source\repos\TokenManager\Business\obj\Debug\netcoreapp2.0\Business.csproj.CoreCompileInputs.cache
 C:\Users\igtr\source\repos\TokenManager\Business\obj\Debug\netcoreapp2.0\Business.AssemblyInfoInputs.cache
 C:\Users\igtr\source\repos\TokenManager\Business\obj\Debug\netcoreapp2.0\Business.AssemblyInfo.cs
 C:\Users\igtr\source\repos\TokenManager\Business\obj\Debug\netcoreapp2.0\Business.dll
 C:\Users\igtr\source\repos\TokenManager\Business\obj\Debug\netcoreapp2.0\Business.pdb
-C:\Users\igtr\source\repos\TokenManager\Business\obj\Debug\netcoreapp2.0\Business.csprojResolveAssemblyReference.cache

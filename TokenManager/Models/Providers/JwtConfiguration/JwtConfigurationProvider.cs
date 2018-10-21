@@ -6,9 +6,9 @@ namespace TokenManager.Models.Providers.ConfigurationBuilderProvider
 {
     public class JwtConfigurationProvider : IJwtConfigurationProvider
     {
-        private ISettingsConfigurationProvider SettingsConfigurationProvider { get; set; }
+        private IAppSettingsConfigurationProvider SettingsConfigurationProvider { get; set; }
 
-        public JwtConfigurationProvider(ISettingsConfigurationProvider settingsConfigurationProvider)
+        public JwtConfigurationProvider(IAppSettingsConfigurationProvider settingsConfigurationProvider)
         {
             SettingsConfigurationProvider = settingsConfigurationProvider;
         }
