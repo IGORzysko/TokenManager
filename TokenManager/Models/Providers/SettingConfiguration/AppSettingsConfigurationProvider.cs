@@ -16,7 +16,7 @@ namespace TokenManager.Models.Providers.SettingConfiguration
         public void CreateConfigurationBuilder()
         {
             this.ConfigSection = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
+                .SetBasePath("C:\\Users\\igtr\\source\\repos\\TokenManager\\TokenManager")
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .Build();
         }

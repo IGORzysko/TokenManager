@@ -17,7 +17,6 @@ namespace UnitTests.TokenManager.Models.Providers.JwtConfiguration
         public void Initialize()
         {
             _appSettingsConfigurationProvider = new AppSettingsConfigurationProvider();
-            _appSettingsConfigurationProvider.CreateConfigurationBuilder();
 
             _jwtConfigurationProvider = new JwtConfigurationProvider(_appSettingsConfigurationProvider);
         }
@@ -37,11 +36,7 @@ namespace UnitTests.TokenManager.Models.Providers.JwtConfiguration
         [TestMethod]
         public void ConfigSectionShoulNotBeNull()
         {
-            var result = _appSettingsConfigurationProvider.ConfigSection;
-
-            Assert.IsNotNull(result);
-
-            Console.WriteLine(result);
+            Assert.IsNotNull(_appSettingsConfigurationProvider.ConfigSection);
         }
 
         [TestMethod]
@@ -50,7 +45,6 @@ namespace UnitTests.TokenManager.Models.Providers.JwtConfiguration
             var result = _jwtConfigurationProvider.GetSecretKey();
 
             Assert.IsTrue(result == "secretKeyValue");
-
         }
 
         [TestMethod]
