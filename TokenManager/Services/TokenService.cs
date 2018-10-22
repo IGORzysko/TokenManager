@@ -4,6 +4,8 @@ using TokenManager.Interfaces.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Distributed;
 using TokenManager.Interfaces.Models.Providers.JwtConfiguration;
+using Microsoft.Extensions.Primitives;
+using System.Linq;
 
 namespace TokenManager.Services
 {
@@ -34,22 +36,36 @@ namespace TokenManager.Services
 
         public async Task DeactivateCurrentAsync()
         {
-            throw new NotImplementedException();
+            this.DeactivateAsync(this.GetCurrentTokenAsync());
         }
 
         public async Task<bool> IsActiveAsync(string token)
         {
             return await _cache.GetStringAsync(GetKey(token)) == null;
         }
-
+        
         public async Task<bool> IsCurrentTokenActiveAsync()
         {
-            throw new NotImplementedException();
+            return await this.IsActiveAsync(this.GetCurrentTokenAsync());
+        }
+
+        #region helper methods
+
+        private string GetCurrentTokenAsync()
+        {
+            var authorizationHeader = _httpContextAccessor.HttpContext
+                .Request.Headers["authorization"];
+
+            return authorizationHeader == StringValues.Empty 
+                ? string.Empty 
+                : authorizationHeader.Single().Split(" ").Last();
         }
 
         private static string GetKey(string token)
         {
             return $"tokens: {token} are deactivated";
         }
+
+        #endregion
     }
 }
