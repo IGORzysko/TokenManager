@@ -2,7 +2,7 @@
 
 namespace TokenManager.Interfaces.Services
 {
-    public interface ITokenManager
+    public interface ITokenService
     {
         Task<bool> IsActiveAsync(string token);
         Task<bool> IsCurrentTokenActiveAsync();

@@ -7,13 +7,13 @@ using TokenManager.Interfaces.Models.Providers.JwtConfiguration;
 
 namespace TokenManager.Services
 {
-    public class TokenManager : ITokenManager
+    public class TokenService : ITokenService
     {
         private readonly IDistributedCache _cache;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IJwtConfigurationProvider _jwtConfigurationProvider;
 
-        public TokenManager (IDistributedCache cache, 
+        public TokenService (IDistributedCache cache, 
                     IHttpContextAccessor httpContextAccessor,
                     IJwtConfigurationProvider jwtConfigurationProvider)
         {
