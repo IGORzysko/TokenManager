@@ -9,7 +9,7 @@ services:
       #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_tokenmanager$
     volumes:
       - C:\Users\igtr\source\repos\TokenManager\TokenManager:C:\app
-      - C:\Users\igtr\onecoremsvsmon:C:\remote_debugger:ro
+      - C:\Users\igtr\onecoremsvsmon\15.0.27428.1:C:\remote_debugger:ro
 #$nuget_volume_mapping_tokenmanager$
     entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646
     labels:
